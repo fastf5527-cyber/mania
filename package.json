@@ -1,0 +1,8 @@
+{
+  "name": "video-player",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "start:lustpress": "cd lustpress && bun run start:prod"
+  }
+}

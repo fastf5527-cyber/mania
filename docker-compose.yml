@@ -1,0 +1,9 @@
+services:
+  lustpress:
+    image: ghcr.io/sinkaroid/lustpress:latest
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: "3000"
+      EXPIRE_CACHE: "1"
+      USER_AGENT: "lustpress/8.5.0-alpha video-player"

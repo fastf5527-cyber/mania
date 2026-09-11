@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intimacy Simulator</title>
+  <link rel="stylesheet" href="sim.css" />
+</head>
+<body>
+  <div id="age-gate" class="age-gate">
+    <div class="age-card">
+      <h2>Adults Only (18+)</h2>
+      <p>Interactive adult simulation with explicit content. Fictional characters only.</p>
+      <button id="enter-btn" class="btn">I am 18+ — Enter</button>
+    </div>
+  </div>
+
+  <div class="sim-wrap">
+    <header class="sim-header">
+      <a href="index.html" class="back">← Videos</a>
+      <h1>Intimacy Simulator</h1>
+      <div class="header-actions">
+        <button id="video-toggle" class="header-btn" type="button">📺 Video Panel (V)</button>
+        <span id="mode-label" class="mode-label">Explore</span>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      <div class="canvas-col">
+        <canvas id="game" width="960" height="540"></canvas>
+        <div class="hud">
+          <div id="hint" class="hint">WASD — move · Walk to partner · E — start</div>
+          <div id="action-bars" class="action-bars hidden">
+            <div class="bar-group">
+              <label>Your pleasure</label>
+              <div class="bar-track"><div id="pleasure-you" class="bar-fill you"></div></div>
+            </div>
+            <div class="bar-group">
+              <label>Partner pleasure</label>
+              <div class="bar-track"><div id="pleasure-partner" class="bar-fill partner"></div></div>
+            </div>
+            <div class="bar-group">
+              <label>Rhythm</label>
+              <div class="bar-track"><div id="rhythm-bar" class="bar-fill rhythm"></div></div>
+            </div>
+          </div>
+        </div>
+        <div id="controls-help" class="controls-help hidden">
+          <strong>Controls</strong>
+          <span>SPACE / Click — thrust</span>
+          <span>Q / E — position</span>
+          <span>↑ ↓ — pace</span>
+          <span>+ / − — zoom</span>
+          <span>V — video panel</span>
+          <span>ESC — leave</span>
+        </div>
+      </div>
+
+      <aside id="video-panel" class="video-panel hidden">
+        <div class="video-panel-head">
+          <h3>Live Video</h3>
+          <button id="video-close" type="button" aria-label="Close">×</button>
+        </div>
+        <p class="video-note">Play real footage alongside the simulation</p>
+        <div class="video-list" id="video-list"></div>
+        <div class="video-player-wrap">
+          <iframe id="video-frame" allow="autoplay; fullscreen" allowfullscreen title="Video player"></iframe>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nightlife Simulator — Adult Game</title>
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <div id="age-gate" class="age-gate">
+    <div class="age-card">
+      <h2>Adults Only (18+)</h2>
+      <p>This game contains explicit adult sexual content. You must be 18 or older to play.</p>
+      <div class="age-actions">
+        <button id="enter-btn" class="btn btn-primary">I am 18 or older</button>
+        <button id="leave-btn" class="btn btn-ghost">Leave</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-app">
+    <header class="game-header">
+      <div class="header-left">
+        <a href="index.html" class="back-link">← Videos</a>
+        <h1>Nightlife Simulator</h1>
+      </div>
+      <div id="stats-bar" class="stats-bar hidden">
+        <div class="stat">
+          <span class="stat-label">Charm</span>
+          <div class="stat-track"><div id="charm-fill" class="stat-fill charm"></div></div>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Chemistry</span>
+          <div class="stat-track"><div id="chem-fill" class="stat-fill chem"></div></div>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Arousal</span>
+          <div class="stat-track"><div id="arousal-fill" class="stat-fill arousal"></div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="game-main">
+      <section id="scene-panel" class="scene-panel">
+        <div id="partner-display" class="partner-display hidden">
+          <div id="partner-avatar" class="partner-avatar"></div>
+          <span id="partner-name" class="partner-name"></span>
+        </div>
+
+        <div id="scene-image" class="scene-image"></div>
+        <div id="scene-text" class="scene-text"></div>
+        <div id="choices" class="choices"></div>
+      </section>
+    </main>
+
+    <footer class="game-footer">
+      Fictional adult simulation · All characters are 18+ · For entertainment only
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

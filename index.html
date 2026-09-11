@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PORNMANIA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo-pornmania.png" />
+</head>
+<body class="theme-indian">
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <div id="age-gate" class="age-gate">
+    <div class="age-card">
+      <img class="age-logo" src="assets/logo-pornmania.png" alt="" />
+      <h2>PORNMANIA — Adults Only (18+)</h2>
+      <p>This site contains explicit adult content. You must be 18 or older to enter.</p>
+      <div class="age-actions">
+        <button id="enter-btn" class="btn btn-primary" type="button" onclick="document.getElementById('age-gate').classList.add('hidden')">I am 18 or older</button>
+        <button id="leave-btn" class="btn btn-ghost" type="button">Leave</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="app">
+    <header class="header">
+      <div class="header-row">
+        <div class="brand">
+          <img class="brand-logo" src="assets/logo-pornmania.png" alt="PORNMANIA logo" />
+          <div>
+            <h1>PORNMANIA</h1>
+            <p id="subtitle" class="subtitle">Indian &amp; Lustpress videos — played on this site</p>
+          </div>
+        </div>
+        <a href="sim.html" class="nav-game">🎮 Play Simulation Game</a>
+      </div>
+    </header>
+
+    <div class="source-tabs" role="tablist" aria-label="Video source">
+      <button id="tab-indian" class="source-tab active" type="button" role="tab" aria-selected="true">Indian</button>
+      <button id="tab-lustpress" class="source-tab" type="button" role="tab" aria-selected="false">Lustpress</button>
+    </div>
+
+    <div id="lustpress-bar" class="lustpress-bar">
+      <select id="site-select" class="site-select hidden" aria-label="Lustpress site">
+        <option value="pornhub">Pornhub</option>
+        <option value="xvideos">Xvideos</option>
+        <option value="xnxx">Xnxx</option>
+        <option value="redtube">Redtube</option>
+        <option value="xhamster">Xhamster</option>
+        <option value="youporn">Youporn</option>
+        <option value="eporner">Eporner</option>
+        <option value="txxx">Txxx</option>
+      </select>
+      <button id="browse-btn" class="btn btn-secondary hidden" type="button">Browse</button>
+      <button id="random-btn" class="btn btn-secondary hidden" type="button">Random</button>
+      <span id="api-status" class="api-status" aria-live="polite"></span>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search Indian videos…" autocomplete="off" />
+      </div>
+    </div>
+
+    <main id="grid" class="grid"></main>
+    <div id="load-more-wrap" class="load-more-wrap hidden">
+      <button id="load-more-btn" class="btn btn-secondary" type="button">Load more</button>
+    </div>
+
+    <footer class="site-footer">
+      <span id="footer-text">Indian videos play in this player. For personal viewing only.</span>
+    </footer>
+  </div>
+
+  <div id="player-modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 id="modal-title">Now Playing</h2>
+        <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="player-wrap">
+        <iframe id="player-frame" class="player-media hidden" allow="autoplay; fullscreen" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation allow-fullscreen"></iframe>
+        <video id="player-video" class="player-media hidden" controls playsinline></video>
+      </div>
+      <div class="modal-footer">
+        <p id="modal-desc" class="modal-desc"></p>
+        <a id="modal-source" class="source-link" href="#" rel="noopener">Playing on this site</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

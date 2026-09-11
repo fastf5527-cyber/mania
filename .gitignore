@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.*
+*.log
+
+# Local/private media
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.mp4
+*.mkv
+*.mov
+
+# Local development
+.vscode/git status
